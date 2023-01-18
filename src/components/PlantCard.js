@@ -27,7 +27,7 @@ function PlantCard({ plant, url, onDeletePlant }) {
       body: JSON.stringify({ price: e.target.price.value })
     })
      .then(res => res.json())
-     .then(plantPrice)
+     .then(setPlantPrice(plantPrice))
   }
 
   const handleDelete = () => {
@@ -45,7 +45,7 @@ function PlantCard({ plant, url, onDeletePlant }) {
         alt={name} 
       />
       <h4>{name}</h4>
-      <p>Price: ${price}</p>
+      <p>Price: ${plantPrice}</p>
       <form onSubmit={handleSubmit}>
         <input
           name="price"
