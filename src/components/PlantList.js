@@ -1,9 +1,18 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList() {
+function PlantList({ plants, url }) {
+
+  const displayPlants = plants.map((plant, key) => (
+    <PlantCard 
+      key={plant.id}
+      plants={plant}
+      url={url}
+    />
+  ))
+
   return (
-    <ul className="cards">{/* render PlantCards components in here */}</ul>
+    <ul className="cards">{displayPlants}</ul>
   );
 }
 

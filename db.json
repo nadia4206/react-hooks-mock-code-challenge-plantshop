@@ -41,6 +41,30 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "Dracula Plant",
+      "image": "https://ak1.ostkcdn.com/images/products/19532623/4-Dracaena-Artificial-Plant-in-Sand-Colored-Planter-Real-Touch-4212919d-b2b9-47d1-98bd-fca4cfdce528_1000.jpg?imwidth=400&impolicy=medium",
+      "price": "25",
+      "id": 8
+    },
+    {
+      "name": "Snake Plant",
+      "image": "https://secure.img1-cg.wfcdn.com/im/15762977/resize-h445%5Ecompr-r85/1248/124813350/Snake+Plant+in+Pot.jpg",
+      "price": "50",
+      "id": 9
+    },
+    {
+      "name": "Figgy",
+      "image": "https://secure.img1-cg.wfcdn.com/im/30678783/resize-h445%5Ecompr-r85/1725/172513763/Faux+Fiddle+Leaf+Fig+Plant+in+Pot.jpg",
+      "price": "40",
+      "id": 10
+    },
+    {
+      "name": "Spider Plant",
+      "image": "https://www.bhg.com/thmb/8poBK0QbateSaPPwXPw74p6Y38M=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/BHG-spider-plant-95f4f8185c11479db04c88bd44fa82aa.jpg",
+      "price": "36.25",
+      "id": 11
     }
   ]
 }
