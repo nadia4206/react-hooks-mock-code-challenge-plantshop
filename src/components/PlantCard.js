@@ -44,7 +44,7 @@ function PlantCard({ plants, onDeletePlant }) {
         alt={name} 
       />
       <h4>{name}</h4>
-      <p>Price: {price}</p>
+      <p>Price: {plantPrice}</p>
       <form onSubmit={handleSubmit}>
         <input 
           type="number" 
