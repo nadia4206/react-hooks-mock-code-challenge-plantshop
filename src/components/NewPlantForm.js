@@ -36,6 +36,7 @@ function NewPlantForm({ url, onAddPlant }) {
     })
      .then(res => res.json())
      .then(onAddPlant)
+     setFormData(initialState)
 
     
 

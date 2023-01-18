@@ -24,6 +24,12 @@ function PlantPage() {
     plant.name.toLowerCase().includes(searchText.toLowerCase())
   ))
 
+  const deletePlant = (plantToDelete) => {
+    const updatedPlantList = plants.filter(plant => (
+      plant.id !== plantToDelete.id))
+        setPlants(updatedPlantList)
+  }
+
   return (
     <main>
       <NewPlantForm
@@ -36,6 +42,8 @@ function PlantPage() {
       />
       <PlantList
         plants={plantsToDisplay}
+        url={url}
+        onPlantDelete={deletePlant}
       />
     </main>
   );
