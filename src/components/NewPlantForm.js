@@ -23,7 +23,7 @@ function NewPlantForm({ url, onAddPlant }) {
     const newPlant = ({
       name: formData.name,
       image: formData.image,
-      price: formData.price
+      price: parseInt(formData.price)
     })
 
     fetch(url, {

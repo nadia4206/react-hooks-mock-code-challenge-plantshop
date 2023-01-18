@@ -1,13 +1,14 @@
 import React from "react";
 import PlantCard from "./PlantCard";
 
-function PlantList({ plants, url }) {
+function PlantList({ plants, url, onDeletePlant }) {
 
-  const displayPlants = plants.map((plant, key) => (
+  const displayPlants = plants.map((plant) => (
     <PlantCard 
       key={plant.id}
       plants={plant}
       url={url}
+      onDeletePlant={onDeletePlant}
     />
   ))
 

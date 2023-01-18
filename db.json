@@ -4,31 +4,13 @@
       "id": 1,
       "name": "Aloe",
       "image": "./images/aloe.jpg",
-      "price": 15.99
-    },
-    {
-      "id": 2,
-      "name": "ZZ Plant",
-      "image": "./images/zz-plant.jpg",
-      "price": 25.98
+      "price": "16.02"
     },
     {
       "id": 3,
       "name": "Pilea peperomioides",
       "image": "./images/pilea.jpg",
       "price": 5.99
-    },
-    {
-      "id": 4,
-      "name": "Pothos",
-      "image": "./images/pothos.jpg",
-      "price": 12.11
-    },
-    {
-      "id": 5,
-      "name": "Jade",
-      "image": "./images/jade.jpg",
-      "price": 10.37
     },
     {
       "id": 6,
@@ -59,12 +41,6 @@
       "image": "https://secure.img1-cg.wfcdn.com/im/30678783/resize-h445%5Ecompr-r85/1725/172513763/Faux+Fiddle+Leaf+Fig+Plant+in+Pot.jpg",
       "price": "40",
       "id": 10
-    },
-    {
-      "name": "Spider Plant",
-      "image": "https://www.bhg.com/thmb/8poBK0QbateSaPPwXPw74p6Y38M=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/BHG-spider-plant-95f4f8185c11479db04c88bd44fa82aa.jpg",
-      "price": "36.25",
-      "id": 11
     }
   ]
 }
