@@ -41,6 +41,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "Bella Palm",
+      "image": "https://buildclub-production.s3.amazonaws.com/images/0/f33b90d2b13b0b4320b50ff47d0c215ec47868a0.jpg",
+      "price": 55,
+      "id": 8
     }
   ]
 }

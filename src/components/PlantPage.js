@@ -8,6 +8,7 @@ const url = 'http://localhost:6001/plants'
 function PlantPage() {
 
   const [plants, setPlants] = useState([])
+  const [searchText, setSearchText] = useState("")
 
   useEffect(() => {
     fetch(url)
@@ -15,14 +16,26 @@ function PlantPage() {
     .then(data => setPlants(data))
   }, [])
 
+  const addNewPlant = (addPlant) => {
+    setPlants([...plants, addPlant])
+  }
+
+  const plantsToDisplay = plants.filter(plant => (
+    plant.name.toLowerCase().includes(searchText.toLowerCase())
+  ))
+
   return (
     <main>
       <NewPlantForm
         url={url}
+        onAddPlant={addNewPlant}
       />
-      <Search />
+      <Search
+        searchText={searchText}
+        onChangeSearch={setSearchText}
+      />
       <PlantList
-        plants={plants}
+        plants={plantsToDisplay}
       />
     </main>
   );
