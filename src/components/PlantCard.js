@@ -31,13 +31,14 @@ function PlantCard({ plant, url }) {
     .then(setPlantPrice(plantPrice))
   }
 
-  const handleDelete = () => {
-    fetch(`${url}/${plant.id}`, {
-      method: 'DELETE',
-    })
-    .then(res=>res.json())
-    .then(onDeletePlant(plant))
-  }
+
+    const handleDeleteClick = () => {
+      fetch(`${url}/${plant.id}`, {
+        method: 'DELETE',
+      })
+      .then(res => res.json())
+      .then(() => onDeletePlant(plant))
+    }
 
   return (
     <li className="card">
@@ -64,7 +65,7 @@ function PlantCard({ plant, url }) {
         <button onClick={handleClick}>Out of Stock</button>
       )}
       <br />
-      <button onClick={handleDelete}>
+      <button onClick={handleDeleteClick}>
         Delete Plant
       </button>
     </li>
