@@ -1,16 +1,72 @@
-import React from "react";
+import React, { useState, onDeletePlant } from "react";
 
-function PlantCard() {
+function PlantCard({ plant, url }) {
+
+  const { name, image, price } = plant
+
+  const [isInStock, setIsInStock] = useState(true)
+
+  const [plantPrice, setPlantPrice] = useState(price)
+
+  const handleClick = () => {
+    setIsInStock((isInStock) => !isInStock)
+  }
+
+  const handlePriceUpdate = (e) => {
+    setPlantPrice(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    fetch(`${url}/${plant.id}`, {
+      method: 'PATCH', 
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({ price: e.target.price.value })
+    })
+    .then(res=>res.json())
+    .then(setPlantPrice(plantPrice))
+  }
+
+  const handleDelete = () => {
+    fetch(`${url}/${plant.id}`, {
+      method: 'DELETE',
+    })
+    .then(res=>res.json())
+    .then(onDeletePlant(plant))
+  }
+
   return (
     <li className="card">
-      <img src={"https://via.placeholder.com/400"} alt={"plant name"} />
-      <h4>{"plant name"}</h4>
-      <p>Price: {"plant price"}</p>
-      {true ? (
-        <button className="primary">In Stock</button>
+      <img 
+        src={image} 
+        alt={name} 
+      />
+      <h4>{name}</h4>
+      <p>Price: ${plantPrice}</p>
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="number"
+          name="price"
+          step="0.01"
+          value={plantPrice}
+          onChange={handlePriceUpdate}
+        />
+        <input type="submit"/>
+
+      </form>
+      {isInStock ? (
+        <button className="primary" onClick={handleClick}>In Stock</button>
       ) : (
-        <button>Out of Stock</button>
+        <button onClick={handleClick}>Out of Stock</button>
       )}
+      <br />
+      <button onClick={handleDelete}>
+        Delete Plant
+      </button>
     </li>
   );
 }
