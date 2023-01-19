@@ -1,6 +1,6 @@
-import React, { useState, onDeletePlant } from "react";
+import React, { useState } from "react";
 
-function PlantCard({ plant, url }) {
+function PlantCard({ plant, url, onDeletePlant }) {
 
   const { name, image, price } = plant
 
@@ -31,14 +31,14 @@ function PlantCard({ plant, url }) {
     .then(setPlantPrice(plantPrice))
   }
 
+  const handleDeleteClick = () => {
+    fetch(`${url}/${plant.id}`, {
+      method: 'DELETE',
+    })
+    .then(res => res.json())
+    .then(() => onDeletePlant(plant))
+  }
 
-    const handleDeleteClick = () => {
-      fetch(`${url}/${plant.id}`, {
-        method: 'DELETE',
-      })
-      .then(res => res.json())
-      .then(() => onDeletePlant(plant))
-    }
 
   return (
     <li className="card">

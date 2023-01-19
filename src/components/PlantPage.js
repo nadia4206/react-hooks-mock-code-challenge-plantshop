@@ -25,7 +25,7 @@ function PlantPage() {
   ))
 
   const deletePlant = (plantToDelete) => {
-    const updatedPlantList = plants.filter(plant => (
+    const updatedPlantList = plants.filter (plant => (
       plant.id !== plantToDelete.id))
         setPlants(updatedPlantList)
   }
