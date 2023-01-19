@@ -41,6 +41,12 @@
       "name": "Fiddle Leaf Fig",
       "image": "./images/fiddle-leaf-fig.jpg",
       "price": 55
+    },
+    {
+      "name": "Bamboo Palm",
+      "image": "https://bloomscape.com/wp-content/uploads/2020/08/bloomscape_bamboo-palm_slate.jpg?ver=279483",
+      "price": "58.95",
+      "id": 8
     }
   ]
 }
